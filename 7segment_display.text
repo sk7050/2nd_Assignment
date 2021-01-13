@@ -1,8 +1,31 @@
+import time
 def prime(x):
 	if(~x==-2):
 		return 0
 	else:
 		return 1
+def Truth_Table_t0_Display(Truth_Table):
+	a1,b1,c1,d1,e1,f1,g1=Truth_Table
+	a=g=d=" --"
+	e=c=f=b="|"
+	if a1==0:
+		a=""
+	if g1==0:
+		g=""
+	if b1==0:
+		b=" "
+	if e1==0:
+		e=" "
+	if c1==0:
+		c=" "
+	if f1==0:
+		f=" "
+	if d1==0:
+		d=""
+	element=(a,f+"  "+b,g,e+"  "+c,d)
+	return element
+
+	
 
 
 def seven_segment(A,B,C,D):
@@ -21,14 +44,17 @@ def Dec_to_B(n):
 	B=int(BI[1])
 	C=int(BI[2])
 	D=int(BI[3])
-	return A,B,C,D
+	#return A,B,C,D
+	Truth_Table=seven_segment(A,B,C,D)
+	display_paramiter=Truth_Table_t0_Display(Truth_Table)
+	return display_paramiter
+
+for n in range(10):
+	time.sleep(1)
+	for i in Dec_to_B(int(n)):
+		print(i)
 
 
-
-
-A,B,C,D=Dec_to_B(8)
-
-print(seven_segment(A,B,C,D))
 
 
 
