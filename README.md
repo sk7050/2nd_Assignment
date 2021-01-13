@@ -1,5 +1,6 @@
 # Seven Segment display project
-[]:https://www.electronics-tutorials.ws/wp-content/uploads/2013/10/segment4.gif?fit=277%2C236
+Inline-style: 
+![alt text](https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/articles-segment4.gif)
 
 The emission of these photons occurs when the diode junction is forward biased by an external voltage allowing current to flow across its junction, and in Electronics we call this process electroluminescence.
 
