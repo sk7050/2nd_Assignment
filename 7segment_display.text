@@ -1,0 +1,35 @@
+def prime(x):
+	if(~x==-2):
+		return 0
+	else:
+		return 1
+
+
+def seven_segment(A,B,C,D):
+	a=(A|C|(B &D)|(prime(B) & prime(D)))
+	b=(prime(B)|(prime(C) & prime(D))|(C & D))
+	c=(B|prime(C)|D)
+	d=((prime(B) & prime(D))|(C & prime(D))|(B & prime(C) & D)|(prime(B) & C)|A)
+	e=((prime(B) & prime(D))|(C & prime(D)))
+	f=(A|(prime(C) & prime(D))|(B & prime(C))|(B & prime(D)))
+	g=(A|(B & prime(C))|(prime(B) & C)|(C & prime(D)))
+	return a,b,c,d,e,f,g
+	
+def Dec_to_B(n):
+	BI= "{0:04b}".format(n)
+	A=int(BI[0])
+	B=int(BI[1])
+	C=int(BI[2])
+	D=int(BI[3])
+	return A,B,C,D
+
+
+
+
+A,B,C,D=Dec_to_B(8)
+
+print(seven_segment(A,B,C,D))
+
+
+
+
